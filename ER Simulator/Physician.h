@@ -9,7 +9,7 @@ private:
 public:
 	virtual void treatPatient() = 0;
 	virtual Patient getPatient() = 0;
-	virtual bool getBusy() = 0;
+	virtual bool occupied() = 0;
 };
 
 
@@ -23,7 +23,7 @@ public:
 	void treatPatient() { isBusy = true; }
 	Patient getPatient() { return patient; }
 	Patient setPatient(Patient p1) { this->patient = p1; }
-	bool getBusy() { return isBusy; }
+	bool occupied() { return isBusy; }
 };
 
 
@@ -37,5 +37,5 @@ public:
 	void treatPatient() { isBusy = true; }
 	Patient getPatient() { return patient; }
 	Patient setPatient(Patient p1) { this->patient = p1; }
-	bool getBusy() { return isBusy; }
+	bool occupied() { return isBusy; }
 };

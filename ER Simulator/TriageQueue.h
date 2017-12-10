@@ -10,11 +10,13 @@ class TriageQueue
 {
 private:
 	std::priority_queue<Patient> the_queue;
-	int arrival_rate;
+	double arrival_rate;
 	std::multiset<Patient> patients;
 public:
 	TriageQueue(int arrival_rate) { this->arrival_rate = arrival_rate; }
-	int getArrivalRate() { return arrival_rate; }
+	double getArrivalRate() { return arrival_rate; }
+	void setArrivalRate(double arrival_rate) { this->arrival_rate = arrival_rate; }
+	std::priority_queue<Patient> getQueue() { return the_queue; }
 	void new_patient()
 	{
 		Patient *p1 = new Patient;
