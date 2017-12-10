@@ -18,6 +18,15 @@
     <ClInclude Include="Patient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Physician.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriageQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TreatmentQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">

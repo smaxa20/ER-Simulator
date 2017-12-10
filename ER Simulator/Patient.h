@@ -99,10 +99,12 @@ public:
 	std::string getInjury() { return injury; }
 	bool getJackass() { return isJackass; }
 	int getTreatmentTime() { return treatment_time; }
+	void setTreatmentTime(int treatment_time) { this->treatment_time = treatment_time; }
 	int getWaitTime() { return wait_time; }
 	int getSeverity() { return severity; }
 
-	bool operator<(Patient p1) { return (this->severity < p1.severity); }
+	bool operator<(const Patient &p1) const {
+		return (this->severity < p1.severity); }
 };
 
 #endif
