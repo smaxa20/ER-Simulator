@@ -89,10 +89,7 @@ public:
 			isJackass = true;
 		else
 			isJackass = false;
-	}
-
-	std::string getthename() {
-		return name;
+		wait_time = 0;
 	}
 
 	std::string getName() { return name; }
@@ -101,10 +98,16 @@ public:
 	int getTreatmentTime() { return treatment_time; }
 	void setTreatmentTime(int treatment_time) { this->treatment_time = treatment_time; }
 	int getWaitTime() { return wait_time; }
+	void setWaitTime(int wait_time) { this->wait_time = wait_time; }
 	int getSeverity() { return severity; }
 
 	bool operator<(const Patient &p1) const {
 		return (this->severity < p1.severity); }
+	
+	//Added by M.Bell as an experiment
+	void incWait()  { wait_time++; }
+	friend class TriageQueue;
+	friend class TreatmentQueue;
 };
 
 #endif

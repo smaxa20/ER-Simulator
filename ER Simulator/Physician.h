@@ -22,7 +22,7 @@ public:
 	Doctor() { isBusy = false; }
 	void treatPatient() { isBusy = true; }
 	Patient getPatient() { return patient; }
-	Patient setPatient(Patient p1) { this->patient = p1; }
+	void setPatient(Patient p1) { this->patient = p1; }
 	bool occupied() { return isBusy; }
 };
 
@@ -36,6 +36,6 @@ public:
 	Nurse() { isBusy = false; }
 	void treatPatient() { isBusy = true; }
 	Patient getPatient() { return patient; }
-	Patient setPatient(Patient p1) { this->patient = p1; }
+	void setPatient(Patient p1) { this->patient = p1; }
 	bool occupied() { return isBusy; }
 };

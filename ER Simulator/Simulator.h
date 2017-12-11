@@ -41,7 +41,7 @@ public:
 		}
 	}
 
-	void enter_date()
+	void enter_data()
 	{
 		cout << "This is an ER simulator." << endl;
 		cout << "This simulator assumes that the patient arrival rate will be at most 60 patients per hour." << endl;
@@ -111,6 +111,35 @@ public:
 			}
 		}
 	}
-	void search_by_name(std::string);
-	void list_names();
+	void search_by_name(std::string name)
+	{
+		for (int i = 0; i < treatment_queue->discharge.size(); i++)
+		{
+			if (treatment_queue->discharge[i].getName() == name)
+			{
+				cout << "Name: " << treatment_queue->discharge[i].getName() << endl;
+				cout << "Injury: " << treatment_queue->discharge[i].getInjury() << endl;
+				cout << "Jackass?: " << treatment_queue->discharge[i].getJackass() << endl;
+				cout << "Treatment Time: " << treatment_queue->discharge[i].getTreatmentTime() << endl;
+			}
+		}
+		
+	}
+
+	void list_names()
+	{
+		for (int i = 0; i < treatment_queue->discharge.size(); i++)
+		{
+			cout << "Name: " << treatment_queue->discharge[i].getName() << endl;
+		}
+	}
+
+	void run_simulation()
+	{
+		for (clock = 0; clock < total_time; clock++)
+		{
+			triage_queue->Update(clock);
+			treatment_queue->Update(clock);
+		}
+	}
 };

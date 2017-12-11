@@ -27,7 +27,7 @@ public:
 	{
 		std::multiset<Patient>::iterator it;
 		for (it = patients.begin(); it != patients.end(); ++it)
-			it->getWaitTime++;
+			it->incWait();
 		srand(time(NULL));
 		double num = double(rand()) / RAND_MAX;
 		if (num < arrival_rate)
