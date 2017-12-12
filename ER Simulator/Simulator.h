@@ -47,7 +47,7 @@ public:
 		cout << "This simulator assumes that the patient arrival rate will be at most 60 patients per hour." << endl;
 		cout << "This simulator also assumes that there will be at least one doctor and at least one nurse on duty at all times." << endl;
 
-		int rate = read_int("Please enter your desired patient arrival rate: ", 1, 60);
+		double rate = read_int("Please enter your desired patient arrival rate: ", 1, 60);
 		double arrival_rate = rate / 60.0;
 
 		int num_docs = read_int("Please enter your desired number of doctors: ", 1, INT_MAX);
@@ -57,59 +57,62 @@ public:
 		total_time *= 60;
 
 		// set the patient arrival rate for the triage_queue
+		triage_queue = new TriageQueue(arrival_rate);
 		triage_queue->setArrivalRate(arrival_rate);
 
 		// set the number of doctors and nurses 
-		treatment_queue->setDocs(num_docs);
-		treatment_queue->setNurses(num_nurses);
+		treatment_queue = new TreatmentQueue(num_docs, num_nurses, triage_queue);
 	}
 	void show_stats()
 	{
 		cout << "Number of patients treated: " << treatment_queue->getServed() << endl;
 		cout << "Average visit time: " << treatment_queue->getTime() / treatment_queue->getServed() << endl;
-
-		if (list == false)
+		char menu;
+		do
 		{
-			cout << "Choose what to do next:" << endl;
-			cout << "    a. List names" << endl;
-			cout << "    b. Search by name" << endl;
-			cout << "    c. Terminate Program" << endl;
-
-			char menu;
-			std::string name;
-			switch (menu)
+			if (list == false)
 			{
-			case 'a':
-				cout << "Enter a name: ";
-				std::cin >> name;
-				search_by_name(name);
-				break;
-			case 'b':
-				list_names();
-				break;
-			case 'c':
-				break;
-			}
-		}
-		else if (list == true)
-		{
-			cout << "Choose what to do next:" << endl;
-			cout << "    a. Search by name" << endl;
-			cout << "    b. Terminate Program" << endl;
+				cout << "Choose what to do next:" << endl;
+				cout << "    a. Terminate Program" << endl;
+				cout << "    b. Search by name" << endl;
+				cout << "    c. List Names" << endl;
 
-			char menu;
-			std::string name;
-			switch (menu)
-			{
-			case 'a':
-				cout << "Enter a name: ";
-				std::cin >> name;
-				search_by_name(name);
-				break;
-			case 'b':
-				break;
+				std::string name;
+				std::cin >> menu;
+				switch (menu)
+				{
+				case 'a':
+					break;
+				case 'b':
+					cout << "Enter a name: ";
+					std::cin >> name;
+					search_by_name(name);
+					break;
+				case 'c':
+					list_names();
+					break;
+				}
 			}
-		}
+			else if (list == true)
+			{
+				cout << "Choose what to do next:" << endl;
+				cout << "    a. Terminate Program" << endl;
+				cout << "    b. Search by Name" << endl;
+
+				char menu;
+				std::string name;
+				switch (menu)
+				{
+				case 'a':
+					break;
+				case 'b':
+					cout << "Enter a name: ";
+					std::cin >> name;
+					search_by_name(name);
+					break;
+				}
+			}
+		} while (menu != 'a');
 	}
 	void search_by_name(std::string name)
 	{
@@ -138,8 +141,8 @@ public:
 	{
 		for (clock = 0; clock < total_time; clock++)
 		{
-			triage_queue->Update(clock);
-			treatment_queue->Update(clock);
+			this->triage_queue->Update(clock);
+			this->treatment_queue->Update(clock);
 		}
 	}
 };

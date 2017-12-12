@@ -20,10 +20,14 @@ private:
 	bool isBusy;
 public:
 	Doctor() { isBusy = false; }
+
 	void treatPatient() { isBusy = true; }
+
 	Patient getPatient() { return patient; }
 	void setPatient(Patient p1) { this->patient = p1; }
+
 	bool occupied() { return isBusy; }
+	void setBusy(bool isBusy) { this->isBusy = isBusy; }
 };
 
 
@@ -34,8 +38,12 @@ private:
 	bool isBusy;
 public:
 	Nurse() { isBusy = false; }
+
 	void treatPatient() { isBusy = true; }
+
 	Patient getPatient() { return patient; }
 	void setPatient(Patient p1) { this->patient = p1; }
+
 	bool occupied() { return isBusy; }
+	void setBusy(bool isBusy) { this->isBusy = isBusy; }
 };

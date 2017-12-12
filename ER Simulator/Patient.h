@@ -17,6 +17,17 @@ private:
 	int treatment_time;
 	int wait_time;
 public:
+	//Patient(std::string name, int severity, std::string injury, bool isJackass, int treatment_time, int wait_time)
+	//{
+	//	this->name = name;
+	//	this->severity = severity;
+	//	this->injury = injury;
+	//	this->isJackass = isJackass;
+	//	this->treatment_time = treatment_time;
+	//	this->wait_time = wait_time;
+	//}
+
+
 	Patient()
 	{
 		srand(time(NULL));
@@ -90,22 +101,31 @@ public:
 		else
 			isJackass = false;
 		wait_time = 0;
+		treatment_time = 0;
 	}
 
-	std::string getName() { return name; }
-	std::string getInjury() { return injury; }
-	bool getJackass() { return isJackass; }
-	int getTreatmentTime() { return treatment_time; }
+	std::string getName() const { return name; }
+
+	std::string getInjury() const { return injury; }
+
+	bool getJackass() const { return isJackass; }
+
+	int getTreatmentTime() const { return treatment_time; }
 	void setTreatmentTime(int treatment_time) { this->treatment_time = treatment_time; }
-	int getWaitTime() { return wait_time; }
+
+	int getWaitTime() const { return wait_time; }
 	void setWaitTime(int wait_time) { this->wait_time = wait_time; }
-	int getSeverity() { return severity; }
+
+	int getSeverity() const { return severity; }
 
 	bool operator<(const Patient &p1) const {
 		return (this->severity < p1.severity); }
 	
-	//Added by M.Bell as an experiment
-	void incWait()  { wait_time++; }
+	void erase()
+	{
+		delete this;
+	}
+
 	friend class TriageQueue;
 	friend class TreatmentQueue;
 };
