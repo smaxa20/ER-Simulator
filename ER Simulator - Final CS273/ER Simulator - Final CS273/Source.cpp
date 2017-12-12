@@ -6,7 +6,7 @@
 
 int main()
 {
-    std::cout << "Hello" << std::endl;
+    
 	srand(time(NULL));
 	std::cout << std::boolalpha;
 	Simulator sim;
