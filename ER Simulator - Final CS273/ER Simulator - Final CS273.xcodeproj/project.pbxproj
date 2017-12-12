@@ -1,0 +1,269 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6304D9011FDFDE4E002EA67F /* Source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6304D8FD1FDFDE4E002EA67F /* Source.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6304D8EC1FDFDE32002EA67F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6304D8EE1FDFDE32002EA67F /* ER Simulator - Final CS273 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ER Simulator - Final CS273"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6304D8F81FDFDE4E002EA67F /* ER Simulator.vcxproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ER Simulator.vcxproj"; sourceTree = "<group>"; };
+		6304D8F91FDFDE4E002EA67F /* ER Simulator.vcxproj.filters */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ER Simulator.vcxproj.filters"; sourceTree = "<group>"; };
+		6304D8FA1FDFDE4E002EA67F /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		6304D8FB1FDFDE4E002EA67F /* Physician.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Physician.h; sourceTree = "<group>"; };
+		6304D8FC1FDFDE4E002EA67F /* Simulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Simulator.h; sourceTree = "<group>"; };
+		6304D8FD1FDFDE4E002EA67F /* Source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Source.cpp; sourceTree = "<group>"; };
+		6304D8FE1FDFDE4E002EA67F /* Text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text.txt; sourceTree = "<group>"; };
+		6304D8FF1FDFDE4E002EA67F /* TreatmentQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreatmentQueue.h; sourceTree = "<group>"; };
+		6304D9001FDFDE4E002EA67F /* TriageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriageQueue.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6304D8EB1FDFDE32002EA67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6304D8E51FDFDE32002EA67F = {
+			isa = PBXGroup;
+			children = (
+				6304D8F01FDFDE32002EA67F /* ER Simulator - Final CS273 */,
+				6304D8EF1FDFDE32002EA67F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6304D8EF1FDFDE32002EA67F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6304D8EE1FDFDE32002EA67F /* ER Simulator - Final CS273 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6304D8F01FDFDE32002EA67F /* ER Simulator - Final CS273 */ = {
+			isa = PBXGroup;
+			children = (
+				6304D8F81FDFDE4E002EA67F /* ER Simulator.vcxproj */,
+				6304D8F91FDFDE4E002EA67F /* ER Simulator.vcxproj.filters */,
+				6304D8FA1FDFDE4E002EA67F /* Patient.h */,
+				6304D8FB1FDFDE4E002EA67F /* Physician.h */,
+				6304D8FC1FDFDE4E002EA67F /* Simulator.h */,
+				6304D8FD1FDFDE4E002EA67F /* Source.cpp */,
+				6304D8FE1FDFDE4E002EA67F /* Text.txt */,
+				6304D8FF1FDFDE4E002EA67F /* TreatmentQueue.h */,
+				6304D9001FDFDE4E002EA67F /* TriageQueue.h */,
+			);
+			path = "ER Simulator - Final CS273";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6304D8ED1FDFDE32002EA67F /* ER Simulator - Final CS273 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6304D8F51FDFDE32002EA67F /* Build configuration list for PBXNativeTarget "ER Simulator - Final CS273" */;
+			buildPhases = (
+				6304D8EA1FDFDE32002EA67F /* Sources */,
+				6304D8EB1FDFDE32002EA67F /* Frameworks */,
+				6304D8EC1FDFDE32002EA67F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ER Simulator - Final CS273";
+			productName = "ER Simulator - Final CS273";
+			productReference = 6304D8EE1FDFDE32002EA67F /* ER Simulator - Final CS273 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6304D8E61FDFDE32002EA67F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Scott Chad";
+				TargetAttributes = {
+					6304D8ED1FDFDE32002EA67F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6304D8E91FDFDE32002EA67F /* Build configuration list for PBXProject "ER Simulator - Final CS273" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6304D8E51FDFDE32002EA67F;
+			productRefGroup = 6304D8EF1FDFDE32002EA67F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6304D8ED1FDFDE32002EA67F /* ER Simulator - Final CS273 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6304D8EA1FDFDE32002EA67F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6304D9011FDFDE4E002EA67F /* Source.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6304D8F31FDFDE32002EA67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6304D8F41FDFDE32002EA67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6304D8F61FDFDE32002EA67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6304D8F71FDFDE32002EA67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6304D8E91FDFDE32002EA67F /* Build configuration list for PBXProject "ER Simulator - Final CS273" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6304D8F31FDFDE32002EA67F /* Debug */,
+				6304D8F41FDFDE32002EA67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6304D8F51FDFDE32002EA67F /* Build configuration list for PBXNativeTarget "ER Simulator - Final CS273" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6304D8F61FDFDE32002EA67F /* Debug */,
+				6304D8F71FDFDE32002EA67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6304D8E61FDFDE32002EA67F /* Project object */;
+}
