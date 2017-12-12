@@ -36,7 +36,8 @@ public:
 		{
 			patients[i].setWaitTime(patients[i].getWaitTime() + 1);
 		}
-		double num = double(rand()) / RAND_MAX;
+		srand(time(NULL));
+		double num = double(std::rand()) / RAND_MAX;
 		if (num < arrival_rate)
 			new_patient();
 	}
