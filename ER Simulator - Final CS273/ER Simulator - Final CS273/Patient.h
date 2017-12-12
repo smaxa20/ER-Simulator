@@ -30,7 +30,7 @@ public:
 
 	Patient()
 	{
-		srand(time(NULL));
+		//srand(time(NULL));
 		std::string line;
 		int numOfLines = 0;
 		std::ifstream population;

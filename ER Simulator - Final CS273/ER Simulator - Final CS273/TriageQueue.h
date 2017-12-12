@@ -18,12 +18,7 @@ public:
 	double getArrivalRate() { return arrival_rate; }
 	void setArrivalRate(double arrival_rate) { this->arrival_rate = arrival_rate; }
 	std::priority_queue<Patient> getQueue() { return the_queue; }
-	void new_patient()
-	{
-		Patient *p1 = new Patient;
-		the_queue.push(*p1);
-		patients.push_back(*p1);
-	}
+	
 	//void new_patient(std::string name, int severity, std::string injury, bool isJackass, int treatment_time, int wait_time)
 	//{
 	//	Patient p1(name, severity, injury, isJackass, treatment_time, wait_time + 1);
@@ -41,4 +36,10 @@ public:
 		if (num < arrival_rate)
 			new_patient();
 	}
+    void new_patient()
+    {
+        Patient *p1 = new Patient;
+        the_queue.push(*p1);
+        patients.push_back(*p1);
+    }
 };

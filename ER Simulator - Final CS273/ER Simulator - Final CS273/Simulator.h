@@ -47,13 +47,13 @@ public:
 		cout << "This simulator assumes that the patient arrival rate will be at most 60 patients per hour." << endl;
 		cout << "This simulator also assumes that there will be at least one doctor and at least one nurse on duty at all times." << endl;
 
-		double rate = read_int("Please enter your desired patient arrival rate: ", 1, 60);
+		double rate = read_int("Please enter your desired patient arrival rate (0-60): ", 1, 60);
 		double arrival_rate = rate / 60.0;
 
 		int num_docs = read_int("Please enter your desired number of doctors: ", 1, INT_MAX);
 		int num_nurses = read_int("Please enter your desired number of nurses: ", 1, INT_MAX);
 
-		total_time = read_int("Please enter your desired simulation time: ", 168, INT_MAX);
+		total_time = read_int("Please enter your desired simulation time (hours): ", 0, INT_MAX);
 		total_time *= 60;
 
 		// set the patient arrival rate for the triage_queue
@@ -66,7 +66,12 @@ public:
 	void show_stats()
 	{
 		cout << "Number of patients treated: " << treatment_queue->getServed() << endl;
-		cout << "Average visit time: " << treatment_queue->getTime() / treatment_queue->getServed() << endl;
+        if (treatment_queue->getServed() > 0) {
+            cout << "Average visit time: " << treatment_queue->getTime() / treatment_queue->getServed() << endl;
+        }
+        else {
+            std::cerr << "Divide by 0 error." << std::endl;
+        }
 		char menu = ' ';
 		do
 		{

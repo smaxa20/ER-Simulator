@@ -33,11 +33,11 @@ public:
 		this->num_nurses = num_nurses;
 		Doctor *d1 = new Doctor;
 		Nurse *n1 = new Nurse;
-		for (int i = 0; i < doctors.size(); i++)
+		for (int i = 0; i < num_docs; i++)
 		{
 			doctors.push_back(*d1);
 		}
-		for (int i = 0; i < nurses.size(); i++)
+		for (int i = 0; i < num_nurses; i++)
 		{
 			nurses.push_back(*n1);
 		}
@@ -57,7 +57,6 @@ public:
 
 	void Update(int clock)
 	{
-		srand(time(NULL));
 		for (int i = 0; i < nurses.size(); i++)
 		{
 			if (!triage_queue->getQueue().empty())
@@ -84,7 +83,7 @@ public:
 				if (!triage_queue->getQueue().empty())
 				{
 					doctors[i].setPatient(triage_queue->getQueue().top());
-					int num = (rand() % 20) + 1;
+					//int num = (rand() % 20) + 1;
 					if (doctors[i].getPatient().getJackass() == false)
 						doctors[i].getPatient().setTreatmentTime(3);
 					else
@@ -98,7 +97,7 @@ public:
 
 		for (int i = 0; i < nurses.size(); i++)
 		{
-			doctors[i].getPatient().setTreatmentTime(doctors[i].getPatient().getTreatmentTime() - 1);
+			nurses[i].getPatient().setTreatmentTime(nurses[i].getPatient().getTreatmentTime() - 1);
 			total_service_time++;
 			if (nurses[i].getPatient().getTreatmentTime() == 0)
 			{
