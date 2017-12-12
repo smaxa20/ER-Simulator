@@ -35,8 +35,9 @@ public:
 		for (int i = 0; i < patients.size(); i++)
 		{
 			patients[i].setWaitTime(patients[i].getWaitTime() + 1);
+            
 		}
-		double num = double(rand()) / RAND_MAX;
+		double num = double(rand() % 60) / 60;
 		if (num < arrival_rate)
 			new_patient();
 	}

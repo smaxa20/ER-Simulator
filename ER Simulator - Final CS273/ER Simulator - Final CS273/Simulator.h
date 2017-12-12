@@ -67,7 +67,7 @@ public:
 	{
 		cout << "Number of patients treated: " << treatment_queue->getServed() << endl;
 		cout << "Average visit time: " << treatment_queue->getTime() / treatment_queue->getServed() << endl;
-		char menu;
+		char menu = ' ';
 		do
 		{
 			if (list == false)
